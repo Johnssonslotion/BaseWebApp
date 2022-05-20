@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "704871662587",
+    "project_id": "baseweb-345117",
+    "storage_bucket": "baseweb-345117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704871662587:android:624424676a9fd43cd0815e",
+        "android_client_info": {
+          "package_name": "com.example.toilet_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704871662587-h4uca6ar4tihm0kke6u79ad9u07oqstu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN3uBhmuAZ7D7553fQ3vP8wfR1odXj7R8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704871662587-h4uca6ar4tihm0kke6u79ad9u07oqstu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "704871662587-c1653323m48idvjjv1makalonptg6v5c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wehire.toilet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
