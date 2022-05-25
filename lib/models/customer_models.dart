@@ -8,7 +8,7 @@ class InfoCustomer {
   String profilePhoto;
   bool?    sex;
   String?  birth;
-  String?  affected_date;
+  String?  affectedDate;
   
   DateTime t;
 
@@ -19,7 +19,7 @@ class InfoCustomer {
     required this.profilePhoto,
     this.sex,
     this.birth,
-    this.affected_date,
+    this.affectedDate,
     })
     : t = DateTime.now();
   
@@ -32,7 +32,7 @@ class InfoCustomer {
       'profilePhoto': profilePhoto,
       'sex': sex,
       'birth': birth,
-      'affected_date' : affected_date, 
+      'affected_date' : affectedDate, 
       //'agree_gps': agree_gps,
       't': t,
     };
@@ -41,7 +41,7 @@ class InfoCustomer {
   @override
   String toString() {
     //return 'infoCustomer{uid: $uid, name: $name, email: $email,  age: $age, sex:$sex, affected_age : $affected_age, agree_gps: $agree_gps}';
-    return 'infoCustomer{ uid:$uid, name:$name, email:$email, sex:$sex, birth:$birth, affected_date:$affected_date, }';
+    return 'infoCustomer{ uid:$uid, name:$name, email:$email, sex:$sex, birth:$birth, affected_date:$affectedDate, }';
   }
 
   static InfoCustomer fromSnap(DocumentSnapshot snap){

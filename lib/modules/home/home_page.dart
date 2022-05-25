@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:toilet_app/routes/app_routes.dart';
+import 'package:toilet_app/service/gps_services.dart';
 import './home_controller.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 
@@ -21,17 +22,41 @@ class HomePage extends GetView<HomeController> {
         currentIndex = 2;
       } 
       return Scaffold(
-        body: GetRouterOutlet(
-          initialRoute: Routes.FRONT,
-          anchorRoute: Routes.HOME,
-          ),
+        body: Stack(
+          children: [
+            GetRouterOutlet(
+            initialRoute: Routes.FRONT,
+            anchorRoute: Routes.HOME,
+            ),
+            // Obx(() {
+            //   return Positioned(
+            //   top: 500,
+            //   left: 10,
+            //   child: Container(
+            //     color: Colors.white,
+            //     child: Column(
+            //       crossAxisAlignment: CrossAxisAlignment.start,
+            //       children: [
+            //         Text("debug line : ||${controller.requestPermission}"),
+            //         Text("Global key: ${context.navigation.navigatorKey}"),
+            //         Text("location : ${context.location}"),
+            //         Text("GPS status : ${GPSService().enabled}"),
+            //       ],
+            //     ),
+            //   )
+            //   );
+            // })
+            ]
+        ),
         extendBody: true,
-        bottomNavigationBar:  FloatingNavbar(
+        bottomNavigationBar:  
+        GetBuilder<HomeController>(
+          builder: ((controller) =>  FloatingNavbar(
               selectedBackgroundColor: Colors.white,
               iconSize: 24,
               borderRadius: 20,
               width: Get.width * 0.5,
-              currentIndex: controller.index,
+              currentIndex: currentIndex,
               onTap: (currentIndex) {
                 controller.onTapNav(currentIndex);
                 switch (currentIndex){
@@ -53,8 +78,10 @@ class HomePage extends GetView<HomeController> {
                 FloatingNavbarItem(icon: Icons.map_outlined,),
                 FloatingNavbarItem(icon: Icons.bookmarks_outlined,),
               ],
-            ),
-           );
+            )
+          )
+      )
+    );
         },
       );
     }

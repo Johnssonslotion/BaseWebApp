@@ -4,7 +4,7 @@ import 'package:async/async.dart';
 import 'package:get/get.dart';
 
 class SplashService extends GetxService {
-  final welcomeStr = ['GetX', 'Rules!'];
+  final welcomeStr = ['로고', '집어넣고','초기화','디자인팀','일해라'];
   final activeStr = 0.obs;
 
   final memo = AsyncMemoizer<void>();

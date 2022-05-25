@@ -62,7 +62,7 @@ class AppPages {
     GetPage(
         name: _Paths.ROOT,
         page: () => RootPage(),
-        binding: RootBindings(),
+        bindings: [RootBindings()],
         participatesInRootNavigator: true,
         preventDuplicates: true,
         children: [
@@ -74,26 +74,26 @@ class AppPages {
               preventDuplicates: true,
               name: _Paths.HOME,
               page: () => HomePage(),
-              binding: HomeBindings(),
+              bindings: [HomeBindings()],
               children: [
                 GetPage(
                   name: _Paths.BOARD,
                   page: () => BoardPage(),
-                  binding: BoardBindings(),
+                  bindings: [BoardBindings()],
                 ),
                 GetPage(
                     name: _Paths.FRONT,
                     page: () => FrontPage(),
-                    binding: FrontBindings()),
+                    bindings: [FrontBindings()]),
                 GetPage(
                     name: _Paths.MAP,
                     page: () => MapPage(),
-                    binding: MapBindings(),
+                    bindings: [MapBindings()],
                     children: [
                       GetPage(
                         name: _Paths.DETAILS,
                         page: () => DetailPage(),
-                        binding: DetailBindings(),
+                        bindings: [DetailBindings()],
                       )
                     ])
               ]),
@@ -101,12 +101,12 @@ class AppPages {
               preventDuplicates: true,
               name: _Paths.SIGNUP,
               page: () => SignInPage(),
-              binding: MemberBindings(),
+              bindings: [MemberBindings()],
               children: [
                 GetPage(
                   name: _Paths.FORGOT,
                   page: () => ForgotPage(),
-                  binding: MemberBindings(),
+                  bindings: [MemberBindings()],
                 ),
               ]),
           GetPage(
@@ -116,12 +116,12 @@ class AppPages {
             preventDuplicates: true,
             name: _Paths.SIGNIN,
             page: () => SignUpPage(),
-            binding: MemberBindings(),
+            bindings: [MemberBindings()],
           ),
           GetPage(
               name: _Paths.MAP,
               page: () => MapPage(),
-              binding: MapBindings(),
+              bindings: [MapBindings()],
               children: [])
         ]),
   ];

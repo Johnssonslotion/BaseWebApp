@@ -87,7 +87,7 @@ void registerUser(
               uid: cred.user!.uid,
               sex: sex,
               birth: birth,
-              affected_date: affected_date,
+              affectedDate: affected_date,
             );
             await FirebaseFirestore.instance
             .collection('users')

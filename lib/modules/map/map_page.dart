@@ -1,4 +1,4 @@
-import 'dart:html';
+//import 'dart:html';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,7 +23,11 @@ class MapPage extends GetView<MapController> {
         backgroundColor: Colors.transparent,
         //toolbarOpacity: 0.3,
       ),
-      body: WebViewMap(),
+      body: Stack(
+        children:[
+          WebViewMap(),
+          //layout1();
+        ]),
       extendBodyBehindAppBar:true,    
           );
         }  
@@ -50,7 +54,7 @@ class _WebViewMapState extends State<WebViewMap> {
   
   Widget _Layout(context){
     MediaQueryData media = MediaQuery.of(context);
-
+    final HomeCon=Get.put(HomeController());
     return Positioned(
       top: 150,
       left: 100,
@@ -63,6 +67,7 @@ class _WebViewMapState extends State<WebViewMap> {
             Text("  x    : ${media.size.height}"),
             Text("  y    : ${media.size.width}"),
             Text("raito : ${media.size.aspectRatio}"),
+            Text("homeindex : ${HomeCon.index}"),
           ]),
       ),      
       );
